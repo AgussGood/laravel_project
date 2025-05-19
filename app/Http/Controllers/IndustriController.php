@@ -40,12 +40,21 @@ class IndustriController extends Controller
 
         $validate = $request->validate([
             'nama_industri' => 'required|unique:industris',
-            'id_jurusan' => 'required',
+            'id_jurusan'    => 'required',
+            'foto'          => 'required|mimes:jpg,png|max:1024',
         ]);
 
         $industri                = new Industri;
         $industri->nama_industri = $request->nama_industri;
         $industri->id_jurusan    = $request->id_jurusan;
+
+        if ($request->hasFile('foto')) {
+            $img  = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('storage/industri', $name);
+            $industri->foto = $name;
+        }
+
         $industri->save();
 
         session()->flash('success', 'Data berhasil ditambahkan');
@@ -90,12 +99,22 @@ class IndustriController extends Controller
 
         $validate = $request->validate([
             'nama_industri' => 'required',
-            'id_jurusan' => 'required',
+            'id_jurusan'    => 'required',
+            'foto'          => 'required|mimes:jpg,png|max:1024',
         ]);
 
         $industri                = Industri::findOrFail($id);
         $industri->nama_industri = $request->nama_industri;
         $industri->id_jurusan    = $request->id_jurusan;
+
+        if ($request->hasFile('foto')) {
+            $industri->deleteImage();
+            $img  = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('storage/industri', $name);
+            $industri->foto = $name;
+        }
+
         $industri->save();
 
         session()->flash('success', 'Data berhasil dirubah');

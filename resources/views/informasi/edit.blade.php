@@ -18,8 +18,8 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                         <label for="floatingTextarea">Deskripsi</label>
                         <div class="form-floating mb-3">
-                            <label for="floatingTextarea">Deskripsi</label>
                             <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="4" style="height: 150px;"> {{ $informasi->deskripsi }} </textarea>
                                 @error('deskripsi')
                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -35,7 +35,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                 </div>
                 
                 </form>

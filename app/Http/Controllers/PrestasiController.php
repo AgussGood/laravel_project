@@ -1,10 +1,10 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Jurusan;
+use App\Models\Prestasi;
 use Illuminate\Http\Request;
 
-class JurusanController extends Controller
+class PrestasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        $jurusan = Jurusan::all();
-        return view('jurusan.index', compact('jurusan'));
+        $prestasi = prestasi::all();
+        return view('prestasi.index', compact('prestasi'));
     }
 
     /**
@@ -24,7 +24,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        return view('jurusan.create');
+        return view('prestasi.create');
     }
 
     /**
@@ -35,28 +35,31 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-
         $validate = $request->validate([
-            'nama_jurusan' => 'required|unique:jurusans',
+            'tgl_prestasi'  => 'required',
+            'nama_prestasi' => 'required|unique:prestasis',
+            'tingkat'       => 'required',
             'deskripsi'     => 'required',
-            'foto'         => 'nullable|mimes:jpg,png|max:10024',
+            'foto'          => 'nullable|mimes:jpg,png|max:1024',
         ]);
 
-        $jurusan               = new Jurusan();
-        $jurusan->nama_jurusan = $request->nama_jurusan;
-        $jurusan->deskripsi = $request->deskripsi;
-
+        $prestasi                 = new Prestasi();
+        $prestasi->tgl_prestasi = $request->tgl_prestasi;
+        $prestasi->nama_prestasi = $request->nama_prestasi;
+        $prestasi->tingkat       = $request->tingkat;
+        $prestasi->deskripsi     = $request->deskripsi;
 
         if ($request->hasFile('foto')) {
             $img  = $request->file('foto');
             $name = rand(1000, 9999) . $img->getClientOriginalName();
-            $img->move('storage/jurusan', $name);
-            $jurusan->foto = $name;
+            $img->move('storage/prestasi', $name);
+            $prestasi->foto = $name;
         }
 
-        $jurusan->save();
+        $prestasi->save();
         session()->flash('success', 'Data Berhasil ditambahkan');
-        return redirect()->route('jurusan.index');
+        return redirect()->route('prestasi.index');
+
     }
 
     /**
@@ -67,8 +70,8 @@ class JurusanController extends Controller
      */
     public function show($id)
     {
-        $jurusan = Jurusan::findOrFail($id);
-        return view('jurusan.show', compact('jurusan'));
+        $prestasi = Prestasi::findOrFail($id);
+        return view('prestasi.show', compact('prestasi'));
     }
 
     /**
@@ -79,8 +82,9 @@ class JurusanController extends Controller
      */
     public function edit($id)
     {
-        $jurusan = Jurusan::findOrFail($id);
-        return view('jurusan.edit', compact('jurusan'));
+
+        $prestasi = Prestasi::findOrFail($id);
+        return view('prestasi.edit', compact('prestasi'));
     }
 
     /**
@@ -92,28 +96,32 @@ class JurusanController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $validate = $request->validate([
-            'nama_jurusan' => 'required',
+            'tgl_prestasi' => 'required',
+            'nama_prestasi' => 'required',
+            'tingkat'       => 'required',
             'deskripsi'     => 'required',
-            'foto'       => 'nullable|mimes:jpg,png|max:10024',
+            'foto'          => 'nullable|mimes:jpg,png|max:1024',
         ]);
 
-        $jurusan               = Jurusan::findOrFail($id);
-        $jurusan->nama_jurusan = $request->nama_jurusan;
-        $jurusan->deskripsi = $request->deskripsi;
+        $prestasi                = Prestasi::findOrFail($id);
+        $prestasi->tgl_prestasi = $request->tgl_prestasi;
+        $prestasi->nama_prestasi = $request->nama_prestasi;
+        $prestasi->tingkat       = $request->tingkat;
+        $prestasi->deskripsi     = $request->deskripsi;
 
         if ($request->hasFile('foto')) {
-            $jurusan->deleteImage();
+            $prestasi->deleteImage();
             $img  = $request->file('foto');
             $name = rand(1000, 9999) . $img->getClientOriginalName();
-            $img->move('storage/jurusan', $name);
-            $jurusan->foto = $name;
+            $img->move('storage/prestasi', $name);
+            $prestasi->foto = $name;
         }
 
-        $jurusan->save();
+        $prestasi->save();
         session()->flash('success', 'Data Berhasil diedit');
-        return redirect()->route('jurusan.index');
+        return redirect()->route('prestasi.index');
+
     }
 
     /**
@@ -124,8 +132,8 @@ class JurusanController extends Controller
      */
     public function destroy($id)
     {
-        $jurusan = Jurusan::findOrFail($id);
-        $jurusan->delete();
-        return redirect()->route('jurusan.index');
+        $prestasi = Prestasi::findOrFail($id);
+        $prestasi->delete();
+        return redirect()->route('prestasi.index');
     }
 }

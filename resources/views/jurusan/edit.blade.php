@@ -17,7 +17,24 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <label for="" class="form-label">Deskripsi</label>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="4" style="height: 150px;"> {{ $jurusan->deskripsi }} </textarea>
+                                @error('deskripsi')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Foto</label> <br>
+                            <img src="{{ asset('storage/jurusan/' . $jurusan->foto) }}" alt=""
+                                style="width:100px; height: 100px;"><br><br>
+                            <input type="file" class="form-control @error('foto') is-invalid @enderror"
+                                name="foto">
+                            @error('foto')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
                 </div>
                 </form>
             </div>

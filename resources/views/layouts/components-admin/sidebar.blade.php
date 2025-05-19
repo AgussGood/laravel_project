@@ -1,6 +1,6 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="/home" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Admin</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -21,6 +21,7 @@
                     <a href="{{ route('fasilitas.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Fasilitas</a>
                     <a href="{{ route('jurusan.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Jurusan</a>
                     <a href="{{ route('industri.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Industri</a>
+                    <a href="{{ route('prestasi.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Prestasi</a>
                 </div>
             </nav>
         </div>

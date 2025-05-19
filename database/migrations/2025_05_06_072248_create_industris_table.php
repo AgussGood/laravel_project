@@ -17,6 +17,7 @@ return new class extends Migration
             $table->BigIncrements('id');
             $table->string('nama_industri');
             $table->unsignedBigInteger('id_jurusan');
+            $table->string('foto');
 
             $table->foreign('id_jurusan')->references('id')->on('jurusans')->onDelete('cascade');
             $table->timestamps();

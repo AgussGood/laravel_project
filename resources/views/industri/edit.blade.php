@@ -31,7 +31,17 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div><br>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                         <div class="mb-3">
+                            <label for="" class="form-label">Foto</label> <br>
+                            <img src="{{ asset('storage/industri/' . $industri->foto) }}" alt=""
+                                style="width:100px; height: 100px;"><br><br>
+                            <input type="file" class="form-control @error('foto') is-invalid @enderror"
+                                name="foto">
+                            @error('foto')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
                 </div>
                 </form>
             </div>

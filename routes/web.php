@@ -9,7 +9,7 @@ use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\IndustriController;
 use App\Http\Middleware\isAdmin;
 use App\Http\Controllers\FrontController;
-
+use App\Http\Controllers\PrestasiController;
 
 
 /*
@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index']);
@@ -41,4 +41,6 @@ Route::resource('eskul', EskulController::class);
 Route::resource('fasilitas', FasilitasController::class);
 Route::resource('jurusan', JurusanController::class);
 Route::resource('industri', IndustriController::class);
+Route::resource('prestasi', PrestasiController::class);
+
 });

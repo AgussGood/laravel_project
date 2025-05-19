@@ -41,17 +41,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Tugas</label>
-                            <input type="text" class="form-control @error('tugas') is-invalid @enderror" id=""
-                                aria-describedby="" name="tugas">
+                        <label for="" class="form-label">Tugas</label>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control @error('tugas') is-invalid @enderror" name="tugas" placeholder="Leave a comment here" id="floatingTextarea"
+                                style="height: 150px;" ></textarea>
                             @error('tugas')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control @error('jabatan') is-invalid @enderror" id="" aria-describedby="" name="jabatan">
+                           <label for="" class="form-label">Jabatan</label>
+                             <select  class="form-select mb-3 @error('jabatan') is-invalid @enderror" aria-label="Default select example" name="jabatan">
+                                <option value="Guru">Guru</option>
+                                <option value="Staf">Staf</option>
+                                <option value="Tata Usaha">Tata Usaha</option>
+                                <option value="Bimbingan Konseling">Bimbingan Konseling</option>
+                                <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
+                                <option value="Kepala Sekolah">Kepala Sekolah</option>
+                            </select>
                              @error('jabatan')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -63,7 +70,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
             </div>

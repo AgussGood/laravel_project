@@ -3,7 +3,7 @@
 
     <body>
         <div class="container-fluid position-relative d-flex p-0">
-            <div class="col-12 m-5">
+            <div class="col-11 m-5">
                 <div class="bg-secondary rounded h-100 p-4">
                     <div class="panel-heading">
                         <a href="{{ route('informasi.create') }}" class="btn btn-sm btn-primary">Tambah</a>
@@ -25,7 +25,7 @@
                                     <tr>
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->judul }}</td>
-                                        <td>{{ Str::limit($data->deskripsi, 50) }}</td>
+                                        <td>{{ Str::limit($data->deskripsi, 25) }}</td>
                                         <td scope="row"><img src="{{ asset('storage/informasi/' . $data->foto) }}"
                                                 alt="" style="width:50px; height: 50px;"></td>
                                         <td>

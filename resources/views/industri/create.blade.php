@@ -28,7 +28,15 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div> <br>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Foto</label>
+                            <input type="file" class="form-control @error('foto') is-invalid @enderror"
+                                id="" aria-describedby="" name="foto">
+                             @error('foto')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="col-12 m-5">
+    <div class="col-11 m-5">
         <div class="bg-secondary rounded h-100 p-4">
             <div class="panel-heading">
                 <a href="{{ route('eskul.create') }}" class="btn btn-sm btn-primary">Tambah</a>

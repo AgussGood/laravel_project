@@ -6,39 +6,39 @@
             <div class="col-11 m-5">
                 <div class="bg-secondary rounded h-100 p-4">
                     <div class="panel-heading">
-                        <a href="{{ route('karyawan.create') }}" class="btn btn-sm btn-primary">Tambah</a>
+                        <a href="{{ route('prestasi.create') }}" class="btn btn-sm btn-primary">Tambah</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Jenis Kelamin</th>
-                                    <th scope="col">Tugas</th>
-                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Tanggal Prestasi</th>
+                                    <th scope="col">Nama Prestasi</th>
+                                    <th scope="col">Tingkat</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @php $no=1; @endphp
-                                @foreach ($karyawan as $data)
+                                @foreach ($prestasi as $data)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $data->nama }}</td>
-                                        <td>{{ $data->jenis_kelamin }}</td>
-                                        <td>{{ Str::limit($data->tugas, 25) }}</td>
-                                        <td>{{ $data->jabatan }}</td>
-                                        <td scope="row"><img src="{{ asset('storage/karyawan/' . $data->foto) }}"
+                                        <td>{{ $data->tgl_prestasi }}</td>
+                                        <td>{{ $data->nama_prestasi }}</td>
+                                        <td>{{ $data->tingkat }}</td>
+                                        <td>{{ Str::limit($data->deskripsi, 20) }}</td>
+                                        <td scope="row"><img src="{{ asset('storage/prestasi/' . $data->foto) }}"
                                                 alt="" style="width:50px; height: 50px;"></td>
                                         <td>
-                                            <form action="{{ Route('karyawan.destroy', $data->id) }}" method="post">
+                                            <form action="{{ Route('prestasi.destroy', $data->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <a href="{{ Route('karyawan.edit', $data->id) }}"
+                                                <a href="{{ Route('prestasi.edit', $data->id) }}"
                                                     class="btn btn-success">Ubah</a>
-                                                <a href="{{ Route('karyawan.show', $data->id) }}"
+                                                <a href="{{ Route('prestasi.show', $data->id) }}"
                                                     class="btn btn-sm btn-warning">Tampilkan</a>
                                                 <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                             </form>

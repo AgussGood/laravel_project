@@ -10,7 +10,6 @@
                     @method('PUT')
                     <div class="mb-3">
                         <label for="" class="form-label">Nama Eskul</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
                         <input type="text" class="form-control @error('nama_eskul') is-invalid @enderror" id=""
                             aria-describedby="" name="nama_eskul" value="{{ $eskul->nama_eskul }}">
                         @error('nama_eskul')
@@ -26,7 +25,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
             </div>
             </form>
         </div>

@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('jurusans', function (Blueprint $table) {
             $table->BigIncrements('id');
             $table->string('nama_jurusan');
+            $table->text('deskripsi');
+            $table->string('foto');
+
             $table->timestamps();
         });
     }

@@ -12,11 +12,11 @@
                         @method('PUT')
                         <div class="mb-3">
                             <label for="" class="form-label">Judul</label>
-                            <input type="text" class="form-control text-dark" id="" aria-describedby="" name="judul"
-                                value="{{ $informasi->judul }}" readonly>
+                            <input type="text" class="form-control text-dark" id="" aria-describedby=""
+                                name="judul" value="{{ $informasi->judul }}" readonly>
                         </div>
+                        <label for="floatingTextarea">Deskripsi</label>
                         <div class="form-floating mb-3">
-                            <label for="floatingTextarea">Deskripsi</label>
                             <textarea class="form-control text-dark @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="4"
                                 style="height: 150px;" readonly> {{ $informasi->deskripsi }} </textarea>
                             @error('deskripsi')
@@ -28,7 +28,7 @@
                             <img src="{{ asset('storage/informasi/' . $informasi->foto) }}" alt=""
                                 style="width:200px; height: 200px;">
                         </div>
-                        <button type="submit" class="btn btn-primary">kembali</button>
+                        <a href="{{ route('informasi.index') }}" class="btn btn-sm btn-primary">Kembali</a>
                     </form>
                 </div>
             </div>

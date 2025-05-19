@@ -44,19 +44,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Tugas</label>
-                            <input type="text" class="form-control @error('tugas') is-invalid @enderror" id=""
-                                aria-describedby="" name="tugas" value="{{ $karyawan->tugas }}">
-                            @error('tugas')
+                         <label for="floatingTextarea">Tugas</label>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control @error('tugas') is-invalid @enderror" name="tugas" rows="4" style="height: 150px;"> {{ $karyawan->tugas }} </textarea>
+                                @error('tugas')
                                 <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                                @enderror
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control  @error('jabatan') is-invalid @enderror" id="" aria-describedby="" name="jabatan"
-                                value="{{ $karyawan->jabatan }}">
-                            @error('jabatan')
+                             <select  class="form-select mb-3 @error('jabatan') is-invalid @enderror" aria-label="Default select example" name="jabatan">
+                                <option value="Guru" {{ $karyawan->jabatan == "Guru" ? 'selected' : ''}}>Guru</option>
+                                <option value="Staf"  {{ $karyawan->jabatan == "Staf" ? 'selected' : ''}}>Staf</option>
+                                <option value="Tata Usaha"  {{ $karyawan->jabatan == "Tata Usaha" ? 'selected' : ''}}>Tata Usaha</option>
+                                <option value="Bimbingan Konseling"  {{ $karyawan->jabatan == "Bimbingan Konseling" ? 'selected' : ''}}>Bimbingan Konseling</option>
+                                <option value="Wakil Kepala Sekolah"  {{ $karyawan->jabatan == "Wakil Kepala Sekolah" ? 'selected' : ''}}>Wakil Kepala Sekolah</option>
+                                <option value="Kepala Sekolah"  {{ $karyawan->jabatan == "Kepala Sekolah" ? 'selected' : ''}}>Kepala Sekolah</option>
+                            </select>
+                             @error('jabatan')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -69,7 +74,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
             </div>
