@@ -40,7 +40,7 @@ class PrestasiController extends Controller
             'nama_prestasi' => 'required|unique:prestasis',
             'tingkat'       => 'required',
             'deskripsi'     => 'required',
-            'foto'          => 'nullable|mimes:jpg,png|max:1024',
+            'foto'          => 'required|mimes:jpg,png|max:1024',
         ]);
 
         $prestasi                 = new Prestasi();

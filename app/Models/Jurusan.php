@@ -15,7 +15,7 @@ class Jurusan extends Model
     //relasi ke tabel industri
     public function industri ()
     {
-        return $this->hasMany(Transaksi::class);
+        return $this->hasMany(Industri::class);
     }
 
     public function deleteImage(){

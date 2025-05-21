@@ -38,7 +38,7 @@ class FasilitasController extends Controller
 
         $validate = $request->validate([
             'nama_fasilitas' => 'required|unique:fasilitas',
-            'foto'           => 'nullable|mimes:jpg,png|max:1024',
+            'foto'           => 'required|mimes:jpg,png|max:5024',
         ]);
 
         $fasilitas                 = new Fasilitas();
@@ -92,7 +92,7 @@ class FasilitasController extends Controller
 
         $validate = $request->validate([
             'nama_fasilitas' => 'required',
-            'foto'       => 'nullable|mimes:jpg,png|max:1024',
+            'foto'       => 'nullable|mimes:jpg,png|max:5024',
         ]);
 
         $fasilitas                 = fasilitas::findOrFail($id);

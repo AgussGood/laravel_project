@@ -23,23 +23,12 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link text-success active">Home</a>
-            <a href="about.html" class="nav-item nav-link text-success">About</a>
-            <a href="class.html" class="nav-item nav-link text-success">Classes</a>
-            <a href="team.html" class="nav-item nav-link text-success">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link text-success">Gallery</a>
-            <div class="nav-item dropdown">
-              <a href="#"
-                class="nav-link dropdown-toggle text-success"
-                data-toggle="dropdown">Pages</a>
-              <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item text-success">Blog Grid</a>
-                <a href="single.html" class="dropdown-item text-success">Blog Detail</a>
-              </div>
-            </div>
-            <a href="contact.html" class="nav-item text-success nav-link">Contact</a>
+            <a href="{{url('/')}}" class="nav-item nav-link text-success active">Beranda</a>
+            <a href="{{url('informasi')}}" class="nav-item nav-link text-success">Informasi</a>
+            <a href="{{url('jurusan')}}" class="nav-item nav-link text-success">Jurusan</a>
+            <a href="{{url('guru')}}" class="nav-item nav-link text-success">Guru</a>
+            <a href="{{url('fasilitas')}}" class="nav-item nav-link text-success">Fasilitas</a>
           </div>
-          <a href="" class="btn btn-success px-4">Join Class</a>
         </div>
       </nav>
     </div>

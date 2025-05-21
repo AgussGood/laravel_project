@@ -39,7 +39,7 @@ class JurusanController extends Controller
         $validate = $request->validate([
             'nama_jurusan' => 'required|unique:jurusans',
             'deskripsi'     => 'required',
-            'foto'         => 'nullable|mimes:jpg,png|max:10024',
+            'foto'         => 'required|mimes:jpg,png|max:10024',
         ]);
 
         $jurusan               = new Jurusan();

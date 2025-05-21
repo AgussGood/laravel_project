@@ -100,7 +100,7 @@ class IndustriController extends Controller
         $validate = $request->validate([
             'nama_industri' => 'required',
             'id_jurusan'    => 'required',
-            'foto'          => 'required|mimes:jpg,png|max:1024',
+            'foto'          => 'nullable|mimes:jpg,png|max:1024',
         ]);
 
         $industri                = Industri::findOrFail($id);
