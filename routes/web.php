@@ -33,7 +33,8 @@ Route::get('jurusan', [App\Http\Controllers\FrontController::class, 'jurusan']);
 Route::get('jurusan{id}', [App\Http\Controllers\FrontController::class, 'jurusand'])->name('jurusand');
 Route::get('guru', [App\Http\Controllers\FrontController::class, 'guru']);
 Route::get('fasilitas', [App\Http\Controllers\FrontController::class, 'fasilitas']);
-
+Route::get('prestasi', [App\Http\Controllers\FrontController::class, 'prestasi']);
+Route::get('eskul', [App\Http\Controllers\FrontController::class, 'eskul']);
 
 Route::prefix('admin')->middleware('auth')->group(function () {
 

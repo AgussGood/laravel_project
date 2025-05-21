@@ -28,6 +28,8 @@
             <a href="{{url('jurusan')}}" class="nav-item nav-link text-success">Jurusan</a>
             <a href="{{url('guru')}}" class="nav-item nav-link text-success">Guru</a>
             <a href="{{url('fasilitas')}}" class="nav-item nav-link text-success">Fasilitas</a>
+            <a href="{{url('prestasi')}}" class="nav-item nav-link text-success">Prestasi</a>
+            <a href="{{url('eskul')}}" class="nav-item nav-link text-success">Eskul</a>
           </div>
         </div>
       </nav>

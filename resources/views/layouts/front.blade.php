@@ -35,7 +35,6 @@
     @include('layouts.components-user.navbar')
     <!-- Navbar End -->
 
-
     @yield('content')
 
     <!-- Footer Start -->

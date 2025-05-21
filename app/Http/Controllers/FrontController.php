@@ -14,7 +14,7 @@ class FrontController extends Controller
 
     public function index()
     {
-        $informasi = Informasi::all();
+        $informasi = Informasi::take(3)->latest()->get();
         $karyawan  = Karyawan::take(4)->latest()->get();
         $eskul     = Eskul::all();
         $fasilitas = Fasilitas::all();
@@ -67,6 +67,12 @@ class FrontController extends Controller
     {
         $fasilitas = Fasilitas::orderBy('id','desc')->get();
         return view('fasilitas', compact('fasilitas'));
+    }
+
+    public function prestasi()
+    {
+        $prestasi = Prestasi::orderBy('id','desc')->get();
+        return view('prestasi', compact('prestasi'));
     }
 
 }
