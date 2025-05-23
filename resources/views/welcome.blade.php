@@ -2,14 +2,14 @@
 @section('content')
 
     <!-- Header Start -->
-    <div class="container-fluid bg-success px-0 px-md-5 mb-5">
+    <div class="container-fluid px-0 px-md-5 mb-5" style="background-image: url('user/img/background.jpg');background-repeat: no-repeat; background-size: cover;">
         <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
-                <h4 class="text-white mb-4 mt-5 mt-lg-0">Pusat Pembelajaran Remaja</h4>
-                <h1 class="display-3 font-weight-bold text-white">
+                <h4 class="text-dark mb-4 mt-5 mt-lg-0">Pusat Pembelajaran Remaja</h4>
+                <h1 class="display-3 font-weight-bold text-dark">
                     SMK AL AMANAH
                 </h1>
-                <p class="text-white mb-4">
+                <p class="text-dark mb-4">
                     Menyiapkan Siswa Menjadi Profesional yang Islami,
                     Terampil, dan Siap Bersaing di Dunia Kerja.
                     Membangun Generasi Siap Kerja dan Siap Kuliah degan Pendidikan
@@ -180,85 +180,4 @@
     </div>
      <!-- Informasi End -->
 
-         <!-- Testimoni Start -->
-    <div class="container-fluid py-5">
-        <div class="container p-0">
-            <div class="text-center pb-2">
-                <p class="section-title px-5">
-                    <span class="px-2 text-success">Testimoni</span>
-                </p>
-                <h1 class="mb-4" style="color: #2e7d32">Dari Alumni</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-success mr-3"></h3>
-                        Banyak kenangan yang mungkin
-                        tak akan pernah saya lupakan
-                        Teman-teman, guru dan karyawan keluarga besar sekolah ini menghadirkan rasa kekeluargaan yang
-                        mengajarkan saya betapa banyak hal yang akan saya hadapi selanjutnya.
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="user/img/user1.jpg" style="width: 70px; height: 70px"
-                            alt="Image" />
-                        <div class="pl-3">
-                            <h5 style="color: #2e7d32"> Adibarly</h5>
-                            <i>Angkatan 2019</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-success mr-3"></h3>
-                        Sekolah Penuh Berkah
-                        ilmu bermanfaat
-                        Belajar menempa ilmu dan iman. Tak pernah ada luka dan kesedihan, namun yang ada hanya
-                        kebahagiaan. Terimakasih Bapak Ibu Guru. Doa kami selalu untukmu, semoga keberkahan Allah
-                        terlimpah selalu
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="user/img/user1.jpg" style="width: 70px; height: 70px"
-                            alt="Image" />
-                        <div class="pl-3">
-                            <h5 style="color: #2e7d32">Septiana</h5>
-                            <i>Angkatan 2020</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-success mr-3"></h3>
-                        Semoga SMK AL AMANAH terus berkembang dan semakin berprestasi, meningkatkan kualitas
-                        pembelajaran, meningkatkan sarana dan prasarana di sekolah, melakukan inovasi-inovasi baru agar
-                        dapat memajukan sekolah ini dan menciptakan generasi.
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="user/img/user1.jpg" style="width: 70px; height: 70px"
-                            alt="Image" />
-                        <div class="pl-3">
-                            <h5 style="color: #2e7d32">Anisa</h5>
-                            <i>Angkatan 2021</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-success mr-3"></h3>
-                        Belajar di SMK Al Amanah memberikan saya banyak pengalaman dan keterampilan yang langsung bisa
-                        diterapkan di dunia kerja. Guru-gurunya sabar dan kompeten, dan suasana
-                        belajarnya nyaman. Saya bangga menjadi bagian dari SMK Al Amanah.
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="user/img/user1.jpg" style="width: 70px; height: 70px"
-                            alt="Image" />
-                        <div class="pl-3">
-                            <h5 style="color: #2e7d32">Indah</h5>
-                            <i>Angkatan 2022</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimoni End -->
 @endsection

@@ -75,4 +75,5 @@ class FrontController extends Controller
         return view('prestasi', compact('prestasi'));
     }
 
+
 }

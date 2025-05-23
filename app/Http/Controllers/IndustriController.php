@@ -15,7 +15,7 @@ class IndustriController extends Controller
     public function index()
     {
         $industri = Industri::all();
-        return view('industri.index', compact('industri'));
+        return view('admin/industri.index', compact('industri'));
     }
 
     /**
@@ -26,7 +26,7 @@ class IndustriController extends Controller
     public function create()
     {
         $jurusan = Jurusan::all();
-        return view('industri.create', compact('jurusan'));
+        return view('admin/industri.create', compact('jurusan'));
     }
 
     /**
@@ -71,7 +71,7 @@ class IndustriController extends Controller
     public function show($id)
     {
         $industri = Industri::findOrFail($id);
-        return view('industri.show', compact('industri'));
+        return view('admin/industri.show', compact('industri'));
     }
 
     /**
@@ -84,7 +84,7 @@ class IndustriController extends Controller
     {
         $industri = Industri::findOrFail($id);
         $jurusan  = Jurusan::all();
-        return view('industri.edit', compact('industri', 'jurusan'));
+        return view('admin/industri.edit', compact('industri', 'jurusan'));
     }
 
     /**

@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5 mx-5">
-                    <h3 class="text-blue mb-4">Get In Touch</h3>
+                    <h3 class="text-blue mb-4">Hubungi Kami</h3>
                     <div class="d-flex">
                         <h4 class="fa fa-map-marker-alt text-blue"></h4>
                         <div class="pl-3">
@@ -37,14 +37,15 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
-                    <h3 class="text-blue mb-4">Quick Links</h3>
+                    <h3 class="text-blue mb-4">Tautan Cepat</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Teachers</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Blog</a>
-                        <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        <a class="text-white mb-2" href="{{url('/')}}"><i class="fa fa-angle-right mr-2"></i>Beranda</a>
+                        <a class="text-white mb-2" href="{{url('informasi')}}"><i class="fa fa-angle-right mr-2"></i>Informasi</a>
+                        <a class="text-white mb-2" href="{{url('jurusan')}}"><i class="fa fa-angle-right mr-2"></i>Jurusan</a>
+                        <a class="text-white mb-2" href="{{url('guru')}}"><i class="fa fa-angle-right mr-2"></i>Guru</a>
+                        <a class="text-white mb-2" href="{{url('fasilitas')}}"><i class="fa fa-angle-right mr-2"></i>Fasilitas</a>
+                        <a class="text-white mb-2" href="{{url('prestasi')}}"><i class="fa fa-angle-right mr-2"></i>Prestasi</a>
+                        <a class="text-white" href="{{url('eskul')}}"><i class="fa fa-angle-right mr-2"></i>Eskul</a>
                     </div>
                 </div>
             </div>

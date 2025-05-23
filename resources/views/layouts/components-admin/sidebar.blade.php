@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="{{ route('home') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Dashboard</a>
+                    <a href="{{ url('admin') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Dashboard</a>
                     <a href="{{ route('informasi.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Informasi</a>
                     <a href="{{ route('karyawan.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Karyawan</a>
                     <a href="{{ route('eskul.index') }}" class="nav-item nav-link"><i class="fa fa-table fa-fw"></i> Eskul</a>

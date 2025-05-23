@@ -14,7 +14,7 @@ class EskulController extends Controller
     public function index()
     {
         $eskul = Eskul::all();
-        return view('eskul.index', compact('eskul'));
+        return view('admin/eskul.index', compact('eskul'));
     }
 
     /**
@@ -24,7 +24,7 @@ class EskulController extends Controller
      */
     public function create()
     {
-        return view('eskul.create');
+        return view('admin/eskul.create');
     }
 
     /**
@@ -65,7 +65,7 @@ class EskulController extends Controller
     public function show($id)
     {
         $eskul = Eskul::findOrFail($id);
-        return view('eskul.show', compact('eskul'));
+        return view('admin/eskul.show', compact('eskul'));
     }
 
     /**
@@ -77,7 +77,7 @@ class EskulController extends Controller
     public function edit($id)
     {
         $eskul = Eskul::findOrFail($id);
-        return view('eskul.edit', compact('eskul'));
+        return view('admin/eskul.edit', compact('eskul'));
     }
 
     /**

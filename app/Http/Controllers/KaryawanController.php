@@ -14,7 +14,7 @@ class KaryawanController extends Controller
     public function index()
     {
         $karyawan = Karyawan::all();
-        return view('karyawan.index', compact('karyawan'));
+        return view('admin/karyawan.index', compact('karyawan'));
     }
 
     /**
@@ -24,7 +24,7 @@ class KaryawanController extends Controller
      */
     public function create()
     {
-        return view('karyawan.create');
+        return view('admin/karyawan.create');
     }
 
     /**
@@ -71,7 +71,7 @@ class KaryawanController extends Controller
     public function show($id)
     {
         $karyawan = Karyawan::findOrFail($id);
-        return view('karyawan.show', compact('karyawan'));
+        return view('admin/karyawan.show', compact('karyawan'));
     }
 
     /**
@@ -83,7 +83,7 @@ class KaryawanController extends Controller
     public function edit($id)
     {
         $karyawan = Karyawan::findOrFail($id);
-        return view('karyawan.edit', compact('karyawan'));
+        return view('admin/karyawan.edit', compact('karyawan'));
     }
 
     /**

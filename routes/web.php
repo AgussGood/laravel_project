@@ -7,6 +7,7 @@ use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PrestasiController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,10 +36,13 @@ Route::get('guru', [App\Http\Controllers\FrontController::class, 'guru']);
 Route::get('fasilitas', [App\Http\Controllers\FrontController::class, 'fasilitas']);
 Route::get('prestasi', [App\Http\Controllers\FrontController::class, 'prestasi']);
 Route::get('eskul', [App\Http\Controllers\FrontController::class, 'eskul']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+
 
 Route::prefix('admin')->middleware('auth')->group(function () {
 
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [AdminController::class, 'index']);
     Route::resource('informasi', InformasiController::class);
     Route::resource('karyawan', KaryawanController::class);
     Route::resource('eskul', EskulController::class);

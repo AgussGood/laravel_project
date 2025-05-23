@@ -14,7 +14,7 @@ class InformasiController extends Controller
     public function index()
     {
         $informasi = Informasi::all();
-        return view('informasi.index', compact('informasi'));
+        return view('admin/informasi.index', compact('informasi'));
     }
 
     /**
@@ -24,7 +24,7 @@ class InformasiController extends Controller
      */
     public function create()
     {
-        return view('informasi.create');
+        return view('admin/informasi.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class InformasiController extends Controller
     public function show($id)
     {
         $informasi = Informasi::findOrFail($id);
-        return view('informasi.show', compact('informasi'));
+        return view('admin/informasi.show', compact('informasi'));
     }
 
     /**
@@ -79,7 +79,7 @@ class InformasiController extends Controller
     public function edit($id)
     {
         $informasi = Informasi::findOrFail($id);
-        return view('informasi.edit', compact('informasi'));
+        return view('admin/informasi.edit', compact('informasi'));
     }
 
     /**

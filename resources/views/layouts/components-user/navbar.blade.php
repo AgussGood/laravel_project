@@ -27,9 +27,19 @@
             <a href="{{url('informasi')}}" class="nav-item nav-link text-success">Informasi</a>
             <a href="{{url('jurusan')}}" class="nav-item nav-link text-success">Jurusan</a>
             <a href="{{url('guru')}}" class="nav-item nav-link text-success">Guru</a>
-            <a href="{{url('fasilitas')}}" class="nav-item nav-link text-success">Fasilitas</a>
-            <a href="{{url('prestasi')}}" class="nav-item nav-link text-success">Prestasi</a>
-            <a href="{{url('eskul')}}" class="nav-item nav-link text-success">Eskul</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle text-success"
+                data-toggle="dropdown"
+                >Lainnya</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="{{url('fasilitas')}}" class="dropdown-item text-success">Fasilitas</a>
+                <a href="{{url('prestasi')}}" class="dropdown-item text-success">Prestasi</a>
+                <a href="{{url('eskul')}}" class="dropdown-item text-success">Eskul</a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

@@ -1,11 +1,16 @@
 @extends('layouts.front')
 @section('content')
     <!-- Header Start -->
-    <div class="container-fluid bg-success mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+    <div class="container-fluid mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center"
+           style="background-image: url('user/img/background.jpg');background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                min-height: 50vh;" >
             <h3 class="display-3 font-weight-bold text-white">Informasi</h3>
             <div class="d-inline-flex text-white">
-                <p class="m-0"><a class="text-white" href="{{url('/')}}">Beranda</a></p>
+                <p class="m-0"><a class="text-white" href="{{ url('/') }}">Beranda</a></p>
                 <p class="m-0 px-2">/</p>
                 <p class="m-0">Informasi</p>
             </div>
@@ -32,7 +37,8 @@
                                 <p>
                                     {{ Str::limit($data->deskripsi, 55) }}
                                 </p>
-                                <a href="{{route('informasid', $data->id)}}" class="btn btn-success px-4 mx-auto my-2">Selengkapnya</a>
+                                <a href="{{ route('informasid', $data->id) }}"
+                                    class="btn btn-success px-4 mx-auto my-2">Selengkapnya</a>
                             </div>
                         </div>
                     </div>

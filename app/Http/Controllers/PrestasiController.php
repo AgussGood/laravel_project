@@ -14,7 +14,7 @@ class PrestasiController extends Controller
     public function index()
     {
         $prestasi = prestasi::all();
-        return view('prestasi.index', compact('prestasi'));
+        return view('admin/prestasi.index', compact('prestasi'));
     }
 
     /**
@@ -24,7 +24,7 @@ class PrestasiController extends Controller
      */
     public function create()
     {
-        return view('prestasi.create');
+        return view('admin/prestasi.create');
     }
 
     /**
@@ -71,7 +71,7 @@ class PrestasiController extends Controller
     public function show($id)
     {
         $prestasi = Prestasi::findOrFail($id);
-        return view('prestasi.show', compact('prestasi'));
+        return view('admin/prestasi.show', compact('prestasi'));
     }
 
     /**
@@ -84,7 +84,7 @@ class PrestasiController extends Controller
     {
 
         $prestasi = Prestasi::findOrFail($id);
-        return view('prestasi.edit', compact('prestasi'));
+        return view('admin/prestasi.edit', compact('prestasi'));
     }
 
     /**
